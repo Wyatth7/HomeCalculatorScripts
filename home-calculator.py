@@ -69,11 +69,11 @@ def entry():
     is_affordable = 'Affordable' if affordable(monthly_take_home, payment + total_operations_cost) else 'Not Affordable'
 
     result_dictionary = {
-        'Monthly Payment': get_currency(payment + total_operations_cost) + '; ' + is_affordable,
-        'Monthly Take Home': get_currency(monthly_take_home),
+        'Total Monthly Payment': get_currency(payment + total_operations_cost) + '; ' + is_affordable,
         'Mortgage': get_currency(mortgage),
+        'Down Payment': get_currency(down_payment),
         'Mortgage Payment': get_currency(payment),
-        'Operations': get_currency(total_operations_cost),
+        'Cost of Operations': get_currency(total_operations_cost),
     }
 
     print_results(result_dictionary, monthly_take_home)
